@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TutorTap - Login</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - TutorTap</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <header>
+
+<header>
     <div class="logo">Tutor<span>Tap</span></div>
     <nav>
-      <a href="login.html" class="active">Log In</a>
-      <a href="signup.html">Sign Up</a>
+        <a href="index.html">Home</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="login.html" class="active">Login</a>
     </nav>
-  </header>
+</header>
 
-  <main class="signup-section">
+<section class="signup-section">
     <div class="signup-container">
-      <h1>Welcome Back</h1>
-      <p class="signup-subtext">Log in to your TutorTap account and continue learning!</p>
+        <h1>Login</h1>
+        <p class="signup-subtext">Access your TutorTap account</p>
 
-      <form class="signup-form" action="#" method="post">
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="Enter your email" required>
-        </div>
+        <form class="signup-form">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email">
+            </div>
 
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" placeholder="Enter your password" required>
-        </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" placeholder="Enter your password">
+            </div>
 
-        <a href="homepage.html" class="signup-btn">Log In</a>
+            <a href="homepage.html" class="signup-btn">Login</a>
+        </form>
 
         <p class="login-link">
-          Don't have an account? <a href="signup.html">Sign Up</a>
+            Don’t have an account? <a href="signup.html">Create one</a>
         </p>
-      </form>
     </div>
-  </main>
+</section>
 
-  <footer>
-    <p>&copy; 2025 TutorTap. All rights reserved.</p>
-  </footer>
+<footer>
+    © 2025 TutorTap. All Rights Reserved.
+</footer>
+
 </body>
 </html>

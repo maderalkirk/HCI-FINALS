@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - TutorLink</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .settings-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 95%;
+            max-width: 1400px;
+            margin: 2rem auto;
+            gap: 2rem;
+        }
+
+        .settings-section {
+            flex: 1 1 45%;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(6px);
+            color: #fff;
+        }
+
+        .settings-section h2 {
+            margin-bottom: 1rem;
+            color: #00bfff;
+        }
+
+        .settings-section input,
+        .settings-section select {
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 900px) {
+            .settings-section {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <header>
+        <div class="logo">Tutor<span>Link</span></div>
+        <nav>
+            <a href="homepage.html">Home</a>
+            <a href="tutors.html">Tutors</a>
+            <a href="notifications.html">Notifications</a>
+            <a href="book.html">Book Sessions</a>
+            <a href="profile.html">Profile</a>
+            <a class="active" href="settings.html">Settings</a>
+        </nav>
+    </header>
+
+    <!-- SETTINGS PAGE -->
+    <div class="settings-container">
+
+        <!-- ACCOUNT INFORMATION -->
+        <div class="settings-section">
+            <h2>Account Information</h2>
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter full name">
+
+            <label>Username</label>
+            <input type="text" placeholder="Enter username">
+
+            <label>Email</label>
+            <input type="email" placeholder="Enter email">
+
+            <label>Password</label>
+            <input type="password" placeholder="Enter new password">
+
+            <label>Phone Number</label>
+            <input type="text" placeholder="Enter phone number">
+        </div>
+
+        <!-- PREFERENCES -->
+        <div class="settings-section">
+            <h2>Preferences</h2>
+
+            <label>Preferred Subjects</label>
+            <select multiple>
+                <option>Mathematics</option>
+                <option>Science</option>
+                <option>English</option>
+                <option>Programming</option>
+                <option>History</option>
+            </select>
+
+            <label>Notification Type</label>
+            <select>
+                <option>Email Notifications</option>
+                <option>App Notifications</option>
+                <option>Both Email and App</option>
+            </select>
+
+            <label>Time Zone</label>
+            <select>
+                <option>GMT+8 Manila</option>
+                <option>GMT+0 London</option>
+                <option>GMT-5 New York</option>
+            </select>
+        </div>
+
+        <!-- PRIVACY SETTINGS -->
+        <div class="settings-section">
+            <h2>Privacy Settings</h2>
+            <label><input type="checkbox"> Show my profile to tutors</label>
+            <label><input type="checkbox"> Allow session reminders</label>
+            <label><input type="checkbox"> Allow promotional messages</label>
+            <label><input type="checkbox"> Hide my online status</label>
+            <label><input type="checkbox"> Allow friends to see my bookings</label>
+        </div>
+
+        <!-- PAYMENT & BILLING -->
+        <div class="settings-section">
+            <h2>Payment & Billing</h2>
+            <label>Credit Card Number</label>
+            <input type="text" placeholder="Enter credit card number">
+
+            <label>Expiration Date</label>
+            <input type="text" placeholder="MM/YY">
+
+            <label>CVV</label>
+            <input type="text" placeholder="CVV">
+
+            <label>Billing Address</label>
+            <input type="text" placeholder="Enter billing address">
+        </div>
+
+        <!-- OTHER SETTINGS -->
+        <div class="settings-section">
+            <h2>Other Settings</h2>
+            <label>Language</label>
+            <select>
+                <option>English</option>
+                <option>Filipino</option>
+                <option>Spanish</option>
+            </select>
+
+            <label>Dark Mode</label>
+            <select>
+                <option>Enabled</option>
+                <option>Disabled</option>
+            </select>
+
+            <label>Default Session Duration</label>
+            <select>
+                <option>30 minutes</option>
+                <option>45 minutes</option>
+                <option>60 minutes</option>
+            </select>
+        </div>
+
+        <div style="flex-basis:100%; text-align:center; margin-top:2rem;">
+            <button class="save-btn">Save Changes</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

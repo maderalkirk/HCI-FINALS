@@ -1,21 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BloodLink - Home</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tutors</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">Tutor<span>Tap</span></div>
-        <nav>
-          <a href="index.html" class="active">Home</a>
-          <a href="Notifications.html">Notifications</a>
-          <a href="tutors.html">Tutors</a>
-          <a href="booksession.html">Book Session</a>
-          <a href="profile.html">Profile</a>
-          <a href="support.html">Help/Support</a>
-        </nav>
-      </header>
+
+<!-- NAVIGATION BAR -->
+<header>
+    <div class="logo">Tutor<span>Link</span></div>
+    <nav>
+        <a href="homepage.html">Home</a>
+        <a href="tutors.html" class="active">Tutors</a>
+        <a href="notifications.html">Notifications</a>
+        <a href="book.html">Book Sessions</a>
+        <a href="profile.html">Profile</a>
+        <a href="settings.html">Settings</a>
+    </nav>
+</header>
+
+<div class="page-container">
+    <h1 class="page-title">Our Tutors</h1>
+    <div class="card-container">
+        <!-- Example Tutor Card -->
+        <div class="tutor-card" data-tutor="John Doe">
+            <img src="tutor1.jpg" alt="John Doe">
+            <h3>John Doe</h3>
+            <p>Mathematics</p>
+        </div>
+
+        <div class="tutor-card" data-tutor="Jane Smith">
+            <img src="tutor2.jpg" alt="Jane Smith">
+            <h3>Jane Smith</h3>
+            <p>Science</p>
+        </div>
+
+        <div class="tutor-card" data-tutor="Michael Lee">
+            <img src="tutor3.jpg" alt="Michael Lee">
+            <h3>Michael Lee</h3>
+            <p>English</p>
+        </div>
+
+        <!-- Add more tutors as needed -->
+    </div>
+</div>
+
+<script>
+    const tutorCards = document.querySelectorAll('.tutor-card');
+    tutorCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const tutorName = card.dataset.tutor;
+            // Redirect to booking form 
+            window.location.href = `session-form.html?tutor=${encodeURIComponent(tutorName)}`;
+        });
+    });
+</script>
+
+</body>
 </html>
