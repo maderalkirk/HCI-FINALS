@@ -117,6 +117,39 @@ header nav a.active {
     border-radius: 15px;
 }
 
+.landing-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 10%;
+    text-align: left;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero-image img {
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .landing-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .hero-image img {
+        width: 80%;
+    }
+}
+
+
 /* --------------------------------------------------
     SIGNUP PAGE
 -------------------------------------------------- */
