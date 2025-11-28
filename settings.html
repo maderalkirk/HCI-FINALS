@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings - TutorLink</title>
+    <title>Settings - TutorTap</title>
     <link rel="stylesheet" href="style.css">
     <style>
         .settings-container {
@@ -42,24 +42,21 @@
     </style>
 </head>
 <body>
-
-    <!-- NAVIGATION BAR -->
     <header>
-        <div class="logo">Tutor<span>Link</span></div>
+        <div class="logo">Tutor<span>Tap</span></div>
         <nav>
             <a href="homepage.html">Home</a>
             <a href="tutors.html">Tutors</a>
             <a href="notifications.html">Notifications</a>
-            <a href="book.html">Book Sessions</a>
+            <a href="booksession.html">Book Sessions</a>
             <a href="profile.html">Profile</a>
             <a class="active" href="settings.html">Settings</a>
+            <a href="support.html">Help</a>
         </nav>
     </header>
 
-    <!-- SETTINGS PAGE -->
     <div class="settings-container">
-
-        <!-- ACCOUNT INFORMATION -->
+        <!-- account info -->
         <div class="settings-section">
             <h2>Account Information</h2>
             <label>Full Name</label>
@@ -77,8 +74,7 @@
             <label>Phone Number</label>
             <input type="text" placeholder="Enter phone number">
         </div>
-
-        <!-- PREFERENCES -->
+        <!-- preferences -->
         <div class="settings-section">
             <h2>Preferences</h2>
 
@@ -106,7 +102,7 @@
             </select>
         </div>
 
-        <!-- PRIVACY SETTINGS -->
+        <!-- privacy -->
         <div class="settings-section">
             <h2>Privacy Settings</h2>
             <label><input type="checkbox"> Show my profile to tutors</label>
@@ -116,7 +112,7 @@
             <label><input type="checkbox"> Allow friends to see my bookings</label>
         </div>
 
-        <!-- PAYMENT & BILLING -->
+        <!-- payments -->
         <div class="settings-section">
             <h2>Payment & Billing</h2>
             <label>Credit Card Number</label>
@@ -132,7 +128,7 @@
             <input type="text" placeholder="Enter billing address">
         </div>
 
-        <!-- OTHER SETTINGS -->
+        <!-- other -->
         <div class="settings-section">
             <h2>Other Settings</h2>
             <label>Language</label>
@@ -162,5 +158,18 @@
 
     </div>
 
+<script>
+  const saveBtn = document.querySelector('.save-btn');
+
+  saveBtn.addEventListener('click', function(e) {
+    e.preventDefault(); // prevent default form submission
+    alert('Your settings have been saved successfully!');
+  });
+</script>
+
+<footer>
+  <p>&copy; 2025 TutorTap. All rights reserved.</p>
+</footer>
+    
 </body>
 </html>

@@ -16,6 +16,8 @@
     <a href="notifications.html">Notifications</a>
     <a href="booksession.html" class="active">Book Session</a>
     <a href="profile.html">Profile</a>
+    <a href="settings.html">Settings</a>
+    <a href="support.html">Help</a>
   </nav>
 </header>
 
@@ -29,7 +31,13 @@
 
       <div class="form-group">
         <label>Preferred Tutor</label>
-        <input type="text" id="preferred-tutor" placeholder="Select a tutor" readonly required>
+        <select id="preferred-tutor" required>
+          <option value="" disabled selected>Select a tutor</option>
+          <option value="LeBron James">LeBron James</option>
+          <option value="Doc Ron">Doc Ron</option>
+          <option value="Rendon Labador">Rendon Labador</option>
+          <option value="Josh Mojica">Josh Mojica</option>
+        </select>
       </div>
 
       <div class="form-group">
@@ -64,12 +72,24 @@
 </footer>
 
 <script>
+  // Pre-fill the preferred tutor from the URL
   const urlParams = new URLSearchParams(window.location.search);
   const selectedTutor = urlParams.get('tutor');
   if (selectedTutor) {
     document.getElementById('preferred-tutor').value = selectedTutor;
   }
 </script>
+
+<script>
+  const form = document.querySelector('.session-form');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); 
+    alert('Your booking has been received!'); // popup message
+    form.reset();
+  });
+</script>
+
 
 </body>
 </html>

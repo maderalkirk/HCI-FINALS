@@ -8,42 +8,52 @@
 </head>
 <body>
 
-<!-- NAVIGATION BAR -->
 <header>
-    <div class="logo">Tutor<span>Link</span></div>
+    <div class="logo">Tutor<span>Tap</span></div>
     <nav>
         <a href="homepage.html">Home</a>
         <a href="tutors.html" class="active">Tutors</a>
         <a href="notifications.html">Notifications</a>
-        <a href="book.html">Book Sessions</a>
+        <a href="booksession.html">Book Sessions</a>
         <a href="profile.html">Profile</a>
         <a href="settings.html">Settings</a>
+        <a href="support.html">Help</a>
     </nav>
 </header>
 
 <div class="page-container">
     <h1 class="page-title">Our Tutors</h1>
-    <div class="card-container">
-        <!-- Example Tutor Card -->
-        <div class="tutor-card" data-tutor="John Doe">
-            <img src="tutor1.jpg" alt="John Doe">
-            <h3>John Doe</h3>
-            <p>Mathematics</p>
+
+    <div class="tutor-list">
+
+        <div class="tutor-card" data-tutor="LeBron James">
+            <img src="tutor1.jpg" alt="LeBron James">
+            <h3>LeBron James</h3>
+            <p>Mathematics Specialist</p>
+            <span class="subject-tag">Math</span>
         </div>
 
-        <div class="tutor-card" data-tutor="Jane Smith">
-            <img src="tutor2.jpg" alt="Jane Smith">
-            <h3>Jane Smith</h3>
-            <p>Science</p>
+        <div class="tutor-card" data-tutor="Doc Ron">
+            <img src="tutor2.jpg" alt="Doc Ron">
+            <h3>Doc Ron</h3>
+            <p>Science Tutor</p>
+            <span class="subject-tag">Science</span>
         </div>
 
-        <div class="tutor-card" data-tutor="Michael Lee">
-            <img src="tutor3.jpg" alt="Michael Lee">
-            <h3>Michael Lee</h3>
-            <p>English</p>
+        <div class="tutor-card" data-tutor="Rendon Labador">
+            <img src="tutor3.jpg" alt="Rendon Labador">
+            <h3>Rendon Labador</h3>
+            <p>English Coach</p>
+            <span class="subject-tag">English</span>
         </div>
 
-        <!-- Add more tutors as needed -->
+        <div class="tutor-card" data-tutor="Josh Mojica">
+            <img src="tutor4.jpg" alt="Josh Mojica">
+            <h3>Josh Mojica</h3>
+            <p>Business Mentor</p>
+            <span class="subject-tag">Business</span>
+        </div>
+
     </div>
 </div>
 
@@ -52,11 +62,13 @@
     tutorCards.forEach(card => {
         card.addEventListener('click', () => {
             const tutorName = card.dataset.tutor;
-            // Redirect to booking form 
-            window.location.href = `session-form.html?tutor=${encodeURIComponent(tutorName)}`;
+            // Redirect to correct booking page
+            window.location.href = `booksession.html?tutor=${encodeURIComponent(tutorName)}`;
         });
     });
 </script>
 
+<footer>
+    <p>&copy; 2025 TutorLink. All rights reserved.</p>
 </body>
 </html>

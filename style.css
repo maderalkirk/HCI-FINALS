@@ -102,7 +102,6 @@ header nav a.active {
     box-shadow: 0 5px 15px rgba(0, 191, 255, 0.4);
 }
 
-/* Image */
 .landing-hero-image {
     flex: 1;
     display: flex;
@@ -119,7 +118,7 @@ header nav a.active {
 }
 
 /* --------------------------------------------------
-   SIGNUP / LOGIN FORM
+    SIGNUP PAGE
 -------------------------------------------------- */
 .signup-section {
     display: flex;
@@ -192,7 +191,7 @@ header nav a.active {
 }
 
 /* --------------------------------------------------
-   HOMEPAGE DASHBOARD
+   HOMEPAGE
 -------------------------------------------------- */
 .homepage {
     padding: 2rem;
@@ -227,40 +226,7 @@ header nav a.active {
 }
 
 /* --------------------------------------------------
-   PROFILE PAGE
--------------------------------------------------- */
-.profile-section {
-    min-height: 80vh;
-    padding: 2rem;
-    background: linear-gradient(135deg, #0a1f44, #005eff);
-    color: white;
-    display: flex;
-    justify-content: center;
-}
-
-.profile-container {
-    width: 100%;
-    max-width: 600px;
-}
-
-.profile-card {
-    background: rgba(255, 255, 255, 0.15);
-    padding: 2rem;
-    border-radius: 20px;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.profile-img {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-}
-
-/* --------------------------------------------------
-   PAGE CONTAINER (FOR TUTORS + NOTIFICATIONS)
+   PAGE CONTAINER BASE
 -------------------------------------------------- */
 .page-container {
     padding: 2rem;
@@ -269,47 +235,59 @@ header nav a.active {
     color: #fff;
 }
 
-/* Title */
 .page-title {
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 /* --------------------------------------------------
-   TUTOR CARDS
+   TUTOR CARDS (Updated)
 -------------------------------------------------- */
-.card-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+.tutor-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+    justify-items: center;
+    margin: 0 auto;
+    max-width: 1150px;
 }
 
 .tutor-card {
-    width: 220px;
-    background: #fff;
+    width: 230px;
+    background: #ffffff;
     padding: 15px;
-    border-radius: 12px;
+    border-radius: 14px;
     text-align: center;
     color: #000;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
 }
 
-.tutor-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-}
-
 .tutor-card img {
     width: 100%;
-    height: 180px;
+    height: 190px;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 10px;
 }
 
+.tutor-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+.subject-tag {
+    display: inline-block;
+    background: #00bfff;
+    padding: 4px 10px;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
 
 /* --------------------------------------------------
    NOTIFICATION CARDS
@@ -334,7 +312,9 @@ header nav a.active {
     font-weight: bold;
 }
 
-/* ---------- PROFILE PAGE ---------- */
+/* --------------------------------------------------
+   PROFILE PAGE
+-------------------------------------------------- */
 .profile-container {
   display: flex;
   width: 90%;
@@ -343,7 +323,6 @@ header nav a.active {
   gap: 2rem;
 }
 
-/* LEFT SIDEBAR */
 .profile-sidebar {
   width: 320px; 
   background: #ffffff;
@@ -387,7 +366,6 @@ header nav a.active {
   font-size: 0.95rem;
 }
 
-/* BUTTON */
 .edit-profile-btn {
   width: 100%;
   padding: 0.7rem;
@@ -403,7 +381,6 @@ header nav a.active {
   background: #005fa3;
 }
 
-/* RIGHT SIDE DETAILS */
 .profile-details {
   flex: 1;
 }
@@ -426,112 +403,8 @@ header nav a.active {
   font-size: 0.95rem;
 }
 
-/* BOOKING PAGE */
-
-.calendar-container {
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.calendar-grid {
-  margin-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 1rem;
-}
-
-.calendar-day {
-  padding: 1.2rem;
-  background: #fff;
-  border-radius: 12px;
-  font-weight: 600;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-decoration: none;
-  color: #333;
-  transition: 0.2s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.calendar-day:hover {
-  background: #1e90ff;
-  color: #fff;
-  transform: scale(1.05);
-}
-
-/* ---------- BOOKING CALENDAR ---------- */
-
-.calendar-container {
-  max-width: 900px;
-  margin: 3rem auto;
-  text-align: center;
-  color: white;
-}
-
-.calendar-title {
-  font-size: 2.4rem;
-  font-weight: 700;
-  margin-bottom: 0.3rem;
-}
-
-.calendar-subtitle {
-  font-size: 1rem;
-  margin-bottom: 2rem;
-  color: #cce0ff;
-}
-
-.calendar-box {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 2rem;
-  border-radius: 15px;
-  backdrop-filter: blur(6px);
-}
-
-.weekdays {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  margin-bottom: 1rem;
-  font-weight: bold;
-  color: #a8c8ff;
-}
-
-.weekdays div {
-  padding: 10px 0;
-}
-
-.calendar-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 12px;
-}
-
-.calendar-day,
-.empty {
-  background: rgba(255,255,255,0.2);
-  border-radius: 10px;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.calendar-day a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-.calendar-day:hover {
-  background: #1e90ff;
-  cursor: pointer;
-}
-
 /* --------------------------------------------------
-   SESSION BOOKING FORM (matching signup/login)
+   BOOKING + FORM PAGES
 -------------------------------------------------- */
 .session-section {
     display: flex;
@@ -607,14 +480,104 @@ header nav a.active {
     box-shadow: 0 5px 15px rgba(0, 191, 255, 0.3);
 }
 
+.session-form select {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #e8f0fe;
+    font-size: 1rem;
+    color: #000;
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.session-form select {
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    padding-right: 2.5rem; /* space for custom arrow */
+}
+
+
+/* --------------------------------------------------
+   BOOKING — CALENDAR PAGE (FIXED + WIDE)
+-------------------------------------------------- */
+.calendar-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.calendar-title {
+    font-size: 2.2rem;
+    margin-bottom: 0.4rem;
+    color: #00bfff;
+}
+
+.calendar-subtitle {
+    margin-bottom: 1.6rem;
+    color: #e0ebff;
+}
+
+.calendar-box {
+    background: rgba(255, 255, 255, 0.10);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    color: #00bfff;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+}
+
+.weekdays div {
+    padding: 10px 0;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px;
+}
+
+.calendar-day,
+.empty {
+    background: rgba(255, 255, 255, 0.18);
+    padding: 18px 0;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.05rem;
+    transition: 0.3s;
+}
+
+.calendar-day:hover {
+    background: #1e90ff;
+}
+
+.calendar-day a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
 /* --------------------------------------------------
    SETTINGS PAGE
 -------------------------------------------------- */
 .settings-container {
-    max-width: 900px;
+    max-width: 1000px;
+    width: 100%;
     margin: 2rem auto 4rem auto;
     background: rgba(255, 255, 255, 0.1);
-    padding: 2.5rem 3rem;
+    padding: 3rem;
     border-radius: 20px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(8px);
@@ -622,14 +585,17 @@ header nav a.active {
 }
 
 .settings-container h1 {
-    font-size: 2rem;
+    font-size: 2.3rem;
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     color: #00bfff;
 }
 
 .settings-section {
-    margin-bottom: 2rem;
+    background: rgba(255,255,255,0.12);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
 }
 
 .settings-section h2 {
@@ -658,14 +624,10 @@ header nav a.active {
     margin-bottom: 1rem;
 }
 
-.settings-section input[type="checkbox"] {
-    margin-right: 0.5rem;
-}
-
 .save-btn {
     display: block;
     width: max-content;
-    margin: 1.5rem auto 0 auto;
+    margin: 2rem auto 0 auto;
     padding: 0.75rem 2rem;
     background: linear-gradient(90deg, #1e90ff, #00bfff);
     color: #fff;
@@ -682,6 +644,92 @@ header nav a.active {
     box-shadow: 0 5px 15px rgba(0, 191, 255, 0.3);
 }
 
+/* --------------------------------------------------
+   HELP / SUPPORT PAGE
+-------------------------------------------------- */
+.support-info {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.support-info ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.support-info ul li {
+    margin-bottom: 0.6rem;
+}
+
+.support-form-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 2.5rem 3rem;
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    color: #fff;
+}
+
+.support-form-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #00bfff;
+}
+
+.support-form .form-group {
+    margin-bottom: 1.2rem;
+}
+
+.support-form label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+}
+
+.support-form input,
+.support-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #e8f0fe;
+    font-size: 1rem;
+}
+
+.support-form textarea {
+    resize: vertical;
+}
+
+.support-form button {
+    display: block;
+    width: max-content;
+    margin: 1.5rem auto 0 auto;
+    padding: 0.75rem 2rem;
+    background: linear-gradient(90deg, #1e90ff, #00bfff);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.support-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 191, 255, 0.3);
+}
 
 /* --------------------------------------------------
    FOOTER
